@@ -1,0 +1,10 @@
+Para instalar vue desde Node.js:    npm install -g @vue/cli
+Para crear proyectos en vue:    vue create nombre
+Para iniciar el servidor vue:   npm run serve
+
+Documentacion oficial: https://cli.vuejs.org/
+
+Para realizar routing con vue:  npm install --save vue-router
+
+npm install bootstrap
+
