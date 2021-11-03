@@ -1,12 +1,17 @@
 <template>
-  <div>
+  <div class="container text-center">
     <h1>Comics padre</h1>
+    <hr />
+    <h2 class="bg-danger text-light pt-2 pb-2" v-if="favorito">
+      El comic favorito es {{ favorito }}
+    </h2>
     <ComicHijo
-      v-for="longcomic in longcomics"
-      :key="longcomic"
-      :titulo="this.comics.titulo"
-      :imagen="this.comics.imagen"
-      :descripcion="this.comics.descripcion"
+      v-for="(comic, index) in comics"
+      :key="index"
+      :titulo="comic.titulo"
+      :imagen="comic.imagen"
+      :descripcion="comic.descripcion"
+      v-on:comicFavoritoPadre="comicFavoritoPadre"
     />
   </div>
 </template>
@@ -15,10 +20,11 @@
 import ComicHijo from "./ComicHijo.vue";
 export default {
   name: "ComicsPadre",
-  methods: {},
-  mounted() {
-    this.longcomics = this.comics.length;
-    console.log(this.longcomics);
+  methods: {
+    comicFavoritoPadre(data) {
+      console.log(data);
+      this.favorito = data;
+    },
   },
   data() {
     return {
@@ -36,7 +42,7 @@ export default {
           descripcion: "Lobezno",
         },
         {
-          titulo: "Guardianes de la Galaxia",
+          titulo: "GuardianGal",
           imagen:
             "https://cdn.normacomics.com/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/g/u/guardianes_galaxia_guadianes_infinito.jpg",
           descripcion: "Yo soy Groot",
@@ -60,7 +66,7 @@ export default {
           descripcion: "Murcielago",
         },
       ],
-      longcomics: 0,
+      favorito: "",
     };
   },
   components: {
