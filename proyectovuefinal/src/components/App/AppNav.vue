@@ -39,13 +39,18 @@
             >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/numerodoble/77"
-              >NumeroDoble77</router-link
+            <router-link class="nav-link" to="/numerodoble/"
+              >SinNumeroDoble</router-link
+            >
+          </li>
+          <li v-for="num in valores" :key="num" class="nav-item">
+            <router-link class="nav-link" :to="'/numerodoble/' + num"
+              >SinNumeroDoble {{ num }}</router-link
             >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/numerodoble"
-              >SinNumeroDoble</router-link
+            <router-link class="nav-link" to="/numerosaleatorios"
+              >NumerosAleatorios</router-link
             >
           </li>
         </ul>
@@ -57,5 +62,10 @@
 <script>
 export default {
   name: "AppNav",
+  data() {
+    return {
+      valores: [66, 99, 12],
+    };
+  },
 };
 </script>
