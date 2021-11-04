@@ -38,6 +38,16 @@
               >ComicsPadre</router-link
             >
           </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/numerodoble/77"
+              >NumeroDoble77</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/numerodoble"
+              >SinNumeroDoble</router-link
+            >
+          </li>
         </ul>
       </div>
     </div>

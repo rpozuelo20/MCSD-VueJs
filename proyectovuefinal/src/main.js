@@ -8,12 +8,14 @@ import NumerosPadre from "./components/NumerosSuma/NumerosPadre.vue";
 import Multiplicar from "./components/App/Multiplicar.vue";
 import Deportes from "./components/Deportes/Deportes.vue";
 import ComicsPadre from "./components/Comics/ComicsPadre.vue";
+import NumeroDoble from "./components/NumeroDoble/NumeroDoble.vue";
 
 Vue.config.productionTip = false;
 
 // nota: llamamos al VueRouter y creamos routes (contiene las rutas) y router (actua de enrutador).
 Vue.use(VueRouter);
 const routes = [
+  { path: "/numerodoble/:numero?", component: NumeroDoble },
   { path: "/comicspadre", component: ComicsPadre },
   { path: "/numerospadre", component: NumerosPadre },
   { path: "/multiplicar", component: Multiplicar },
