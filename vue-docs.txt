@@ -8,3 +8,4 @@ Para realizar routing con vue:  npm install --save vue-router
 
 npm install bootstrap
 
+Para realizar eliminacion: npm install --save core-js
