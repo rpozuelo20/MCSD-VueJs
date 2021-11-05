@@ -1,7 +1,7 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Vueapi</a>
+      <a class="navbar-brand" href="#">VueApi</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -16,13 +16,17 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <router-link class="nav-link" to="/coches">Coches</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <router-link class="nav-link" to="/empleadosdetalle"
+              >EmpleadosDetalle</router-link
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <router-link class="nav-link" to="/empleadosoficios"
+              >EmpleadosOficios</router-link
+            >
           </li>
           <li class="nav-item dropdown">
             <a
