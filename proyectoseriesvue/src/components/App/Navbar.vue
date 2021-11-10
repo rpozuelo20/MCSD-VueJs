@@ -61,8 +61,8 @@
   </div>
 </template>
 <script>
-import Global from "./../Global";
-import axios from "axios";
+import ServiceSeries from "./../../services/ServiceSeries";
+const service = new ServiceSeries();
 
 export default {
   name: "Navbar",
@@ -76,10 +76,8 @@ export default {
   },
   methods: {
     getSeries() {
-      var request = "/api/Series";
-      var url = Global.urlapiseries + request;
-      axios.get(url).then((res) => {
-        this.series = res.data;
+      service.getSeries().then((res) => {
+        this.series = res;
       });
     },
   },
