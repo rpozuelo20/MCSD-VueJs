@@ -2,6 +2,24 @@ import Global from "./../components/Global";
 import axios from "axios";
 
 export default class ServiceSeries {
+  deletePersonaje(id) {
+    return new Promise(function (resolve) {
+      var request = "/api/Personajes/" + id;
+      var url = Global.urlapiseries + request;
+      axios.delete(url).then((res) => {
+        resolve(res);
+      });
+    });
+  }
+  postPersonaje(data) {
+    return new Promise(function (resolve) {
+      var request = "/api/Personajes";
+      var url = Global.urlapiseries + request;
+      axios.post(url, data).then((res) => {
+        resolve(res);
+      });
+    });
+  }
   getSerie(id) {
     return new Promise(function (resolve) {
       var request = "/api/Series/" + id;

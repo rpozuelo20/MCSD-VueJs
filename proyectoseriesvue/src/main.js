@@ -2,6 +2,8 @@ import Vue from "vue";
 import App from "./App.vue";
 import Personajes from "./components/Series/Personajes.vue";
 import Serie from "./components/Series/Serie.vue";
+import ModificarPersonaje from "./components/Series/ModificarPersonaje.vue";
+import NuevoPersonaje from "./components/Series/NuevoPersonaje.vue";
 import Home from "./components/App/Home.vue";
 // nota: importar la dependencia de router
 import VueRouter from "vue-router";
@@ -13,6 +15,8 @@ Vue.use(VueRouter);
 const routes = [
   { path: "/series/:idserie/personajes/:idserie", component: Personajes },
   { path: "/series/:idserie", component: Serie },
+  { path: "/modificarpersonaje", component: ModificarPersonaje },
+  { path: "/nuevopersonaje", component: NuevoPersonaje },
   { path: "/home", component: Home },
   { path: "/", component: Home },
 ];
