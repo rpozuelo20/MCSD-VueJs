@@ -1,12 +1,11 @@
 <template>
   <div>
     <h1>Empleados Servicios Oficios</h1>
-    <form method="POST" v-on:submit.prevent="cargarDatosEmpleado">
+    <form method="POST">
       <div class="mb-3">
         <label class="form-label">Seleccione un oficio</label>
-        <!--nota: podria poner @change="cargarDatosEmpleado" en el select para que cuando el valor cambie se haga automaticamente-->
         <select
-          @change="getEmpleados"
+          @change="getEmpleadosOficios"
           class="form-select"
           v-model="oficioselect"
         >
@@ -49,9 +48,9 @@ export default {
     });
   },
   methods: {
-    getEmpleados() {
+    getEmpleadosOficios() {
       console.log(this.oficioselect);
-      service.getEmpleados(this.oficioselect).then((res) => {
+      service.getEmpleadosOficios(this.oficioselect).then((res) => {
         this.empleados = res;
       });
     },

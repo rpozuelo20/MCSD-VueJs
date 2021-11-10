@@ -13,7 +13,7 @@ export default class ServiceEmpleados {
       });
     });
   }
-  getEmpleados(data) {
+  getEmpleadosOficios(data) {
     return new Promise(function (resolve) {
       var request = "/api/empleados/empleadosoficio/" + data;
       var url = Global.urlapiempleados + request;
